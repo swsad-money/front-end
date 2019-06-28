@@ -1,5 +1,5 @@
 /*
- * @Description: 将 axios 封装成 Vue 的插件使用 
+ * @Description: axios to Vue
  */
 
 import apiExample from './interface/example'
@@ -17,7 +17,6 @@ const install = Vue => {
     Object.defineProperties(Vue.prototype, {
         $http: {
             get() {
-                // PS: 这里没有区分命名空间
                 return Object.assign(
                     {},
                     apiExample,
@@ -27,12 +26,6 @@ const install = Vue => {
                     apiSubstitute,
                     apiMine
                 )
-                // 如果需要区分命令空间的话可以参考以下写法
-                // {
-                //     apiLogin,
-                //     apiRegister,
-                //     apiPublish
-                // }
             }
         }
     })
