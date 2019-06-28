@@ -21,7 +21,7 @@ const actions = {
 
 // mutations
 const mutations = {
-  // 设置用户信息
+  // user
   SET_USER: (state, flag) => {
     state.user = flag;
   }
