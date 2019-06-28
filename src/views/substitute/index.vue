@@ -69,7 +69,7 @@
 
         <van-row class="row" type="flex" align="center">
           <van-col span="5" offset="1">
-            主要内容：
+            问卷地址：
           </van-col>
           <van-col span="10">
             {{course.courseClass}}
@@ -86,7 +86,7 @@
         </van-row>
       </template>
 
-      <!-- 留言区 -->
+      <!-- 留言 -->
       <template slot="sku-stepper">
         <van-row type="flex">
           <van-col span="5" offset="1">
@@ -97,11 +97,11 @@
           </van-col>
         </van-row>
       </template>
-      <!-- 自定义 sku actions -->
+      <!-- sku actions -->
       <template slot="sku-actions">
         <div class="van-sku-actions">
           <van-button bottom-action @click="onCollectionClicked">收藏问卷</van-button>
-          <!-- 直接触发 sku 内部事件，通过内部事件执行 onBuyClicked 回调 -->
+          <!-- onBuyClicked callback -->
           <van-button type="primary" bottom-action @click="onSubstituteClicked(course)">立即参与</van-button>
         </div>
       </template>
@@ -132,6 +132,7 @@ export default {
         }
       ];
     },
+
     // 参与
     onSubstituteClicked(course) {
       if (this.user.userId == course.publisher) {
@@ -149,6 +150,7 @@ export default {
         })
         .catch(err => {});
     },
+
     // 收藏
     onCollectionClicked() {
       this.$http.collectCourse({

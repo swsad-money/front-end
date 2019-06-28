@@ -13,7 +13,7 @@
       </van-col>
 
       <van-col span="8" offset="2">
-        <van-button class="btn-edit" size="mini" @click="onToggleEditPopup(true)">编辑个人资料</van-button>
+        <van-button class="btn-edit" size="mini" @click="onToggleEditPopup(true)">修改个人信息</van-button>
       </van-col>
     </van-row>
 
@@ -64,7 +64,7 @@
 
     <van-row class="row" type="flex" align="center">
       <van-col span="4">
-        email：
+        邮箱：
       </van-col>
       <van-col span="10" offset="2">
         {{user.email}}

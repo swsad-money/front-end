@@ -11,7 +11,7 @@
 
       <van-field v-model="editInfo.studentId" label-align="left" clearable label="学号" placeholder="请输入学号" />
 
-      <van-field v-model="editInfo.school" required label-align="left" clearable label="学校" placeholder="请输入学校名称" @focus="showSchoolSearch" />
+      <van-field v-model="editInfo.school" required label-align="left" clearable label="学校" placeholder="请选择学校名称" @focus="showSchoolSearch" />
 
       <van-field v-model="editInfo.college" label-align="left" clearable label="学院" placeholder="请输入学院" />
 
@@ -22,8 +22,8 @@
       <van-field v-model="editInfo.qq" label-align="left" clearable label="QQ" placeholder="请输入QQ号" />
     </van-cell-group>
 
-    <van-actionsheet v-model="isShowCelectSchool" title="输入学校名称查询">
-      <van-search v-model="schoolName" placeholder="请输入学校名" show-action @search="onSearchSchool">
+    <van-actionsheet v-model="isShowCelectSchool" title="查询">
+      <van-search v-model="schoolName" placeholder="请输入学校名称" show-action @search="onSearchSchool">
         <div slot="action" @click="onSearchSchool">搜索</div>
       </van-search>
       <ul class="school-list">

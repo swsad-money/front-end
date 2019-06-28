@@ -12,11 +12,11 @@
 
     <van-row>
       <van-button size="small" @click="handleRegister">
-        {{isLogin ? '注 册' : '已有账号'}}
+        {{isLogin ? '注 册' : '返 回'}}
       </van-button>
 
       <van-button type="primary" class="btn-login" size="small" @click="handleLogin">
-        {{isLogin ? '登 录' : '注册并登录'}}
+        {{isLogin ? '登 录' : '注 册'}}
       </van-button>
     </van-row>
 
@@ -38,7 +38,6 @@ export default {
   methods: {
     ...mapMutations(['SET_USER']),
     handleQuestion() {
-      // no question
     },
     login() {
       this.$http
@@ -55,8 +54,8 @@ export default {
     },
     showLoginTip() {
       const toast = this.$toast.loading({
-        duration: 0, // 持续展示 toast
-        forbidClick: false, // 禁用背景点击
+        duration: 0, 
+        forbidClick: false, 
         loadingType: "spinner",
         message: "登录中..."
       });

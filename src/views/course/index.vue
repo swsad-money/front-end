@@ -70,7 +70,7 @@
 
       <van-row class="row" type="flex" align="center">
         <van-col span="5" offset="1">
-          主要内容：
+          问卷地址：
         </van-col>
         <van-col span="10">
           {{course.courseClass}}

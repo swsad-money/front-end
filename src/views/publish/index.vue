@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <van-row class="row tip" type="flex" align="center">
-      <van-icon name="peer-pay"></van-icon>
+      <van-icon name="exchange"></van-icon>
       <span>发布你的问卷，大家一起挣闲钱</span>
     </van-row>
 
@@ -23,16 +23,16 @@
     </van-cell-group>
 
     <van-cell-group>
-      <van-field required v-model="courseClass" placeholder="请输入主要内容" label="主要内容" left-icon="pending-orders" />
+      <van-field required v-model="courseClass" placeholder="请输入问卷地址" label="问卷地址" left-icon="location" />
     </van-cell-group>
 
     <van-cell-group>
-      <van-field required v-model="coursePlace" placeholder="请输入问卷主题" label="问卷主题" left-icon="location" />
+      <van-field required v-model="coursePlace" placeholder="请输入问卷主题" label="问卷主题" left-icon="pending-orders" />
     </van-cell-group>
 
     <p class="tip-info">
-      <van-icon name="question"></van-icon>
-      <span>是否分享以下信息给参与人：</span>
+      <van-icon name="pending-orders"></van-icon>
+      <span>公开部分信息：</span>
     </p>
 
     <van-cell-group class="checkbox">
@@ -82,7 +82,7 @@ export default {
       maxDate: new Date(new Date().getFullYear() + 1, 6, 17),
       publisher: "",
       courseName: "", // 问卷名称
-      courseClass: "", // 主要内容
+      courseClass: "", // 问卷地址
       coursePlace: "" // 问卷主题
     };
   },
@@ -167,10 +167,7 @@ export default {
           this.$router.push("/home/mine");
         });
     }
-
-    // if (!this.user.schoolId) {
-    //   Toast('请先绑定学校！');
-    // }
+    
   }
 };
 </script>

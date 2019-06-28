@@ -19,7 +19,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   width: 100%;
   height: 100%;
-  color: #2c3e50;
+  color: #201a3f;
   display: flex;
   flex-direction: column;
   overflow: hidden;
